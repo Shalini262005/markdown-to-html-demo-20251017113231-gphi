@@ -3,41 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello from Gemini!</title>
+    <title>Gemini Round 2</title>
     <style>
         body {
             font-family: sans-serif;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
         }
-        #message {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-        #timestamp {
-            font-style: italic;
-            color: #777;
+        #message-container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <div id="message">Hello from Gemini!</div>
-    <div id="timestamp"></div>
+    <div id="message-container">
+        <p id="message">Hello from Gemini - Round 2!</p>
+        <p id="timestamp"></p>
+    </div>
 
     <script>
         function updateTimestamp() {
             const now = new Date();
             const timestampElement = document.getElementById('timestamp');
-            timestampElement.textContent = 'Last updated: ' + now.toLocaleString();
+            timestampElement.textContent = "Current Timestamp: " + now.toLocaleString();
         }
 
+        // Update timestamp every second
+        setInterval(updateTimestamp, 1000);
+
+        // Initial timestamp update
         updateTimestamp();
-        setInterval(updateTimestamp, 1000); // Update every second
     </script>
-</body>
+<p>Round 2 update</p></body>
 </html>
